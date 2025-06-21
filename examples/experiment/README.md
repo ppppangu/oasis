@@ -66,6 +66,10 @@ We assume that users are conducting large-scale experiments on a Slurm workload 
 Taking the download of LLaMA-3 from Hugging Face as an example:
 
 ```bash
+# Using uv (recommended)
+uv add huggingface_hub
+
+# Or using pip
 pip install huggingface_hub
 
 huggingface-cli download --resume-download "meta-llama/Meta-Llama-3-8B-Instruct" --local-dir "YOUR_LOCAL_MODEL_DIRECTORY" --local-dir-use-symlinks False --resume-download --token "YOUR_HUGGING_FACE_TOKEN"

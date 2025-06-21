@@ -109,7 +109,19 @@ For more showcaes:
 
 1. **Install the OASIS package:**
 
-Installing OASIS is a breeze thanks to its availability on PyPI. Simply open your terminal and run:
+Installing OASIS is a breeze thanks to its availability on PyPI. You can install it using either uv (recommended) or pip:
+
+**Option 1: Using uv (recommended):**
+
+```bash
+# Install uv if you haven't already
+pip install uv
+
+# Install OASIS
+uv add camel-oasis
+```
+
+**Option 2: Using pip:**
 
 ```bash
 pip install camel-oasis

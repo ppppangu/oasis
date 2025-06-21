@@ -242,11 +242,18 @@ git clone https://github.com/camel-ai/oasis.git
 # Change directory into project directory
 cd oasis
 
-# Activate oasis virtual environment
-poetry shell
+# Install uv if you haven't already
+pip install uv
 
-# Install oasis from source
-poetry install
+# Create and activate virtual environment, then sync dependencies
+uv venv
+uv sync
+
+# Activate the virtual environment
+# On Windows:
+.venv\Scripts\activate
+# On macOS/Linux:
+source .venv/bin/activate
 
 # The following command installs a pre-commit hook into the local git repo,
 # so every commit gets auto-formatted and linted.
@@ -259,7 +266,7 @@ pre-commit run --all-files
 pytest test
 
 # Exit the virtual environment
-exit
+deactivate
 ```
 
 These commands will install all the necessary dependencies for running the package, examples, linting, formatting, tests, and coverage.
